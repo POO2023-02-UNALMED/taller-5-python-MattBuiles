@@ -1,4 +1,4 @@
-from animal import Animal
+from .animal import Animal
 class Pez(Animal):
   listado=[]
   salmones=0
@@ -8,7 +8,7 @@ class Pez(Animal):
     self._colorEscamas=colorEscamas
     self._cantidadAletas=cantidadAletas
     Pez.listado.append(self)
-    super.totalAnimales+=1
+    Animal.cp+=1
   @classmethod
   def cantidadPeces(cls):
     return len(cls.listado)
@@ -22,3 +22,5 @@ class Pez(Animal):
     return Pez(nombre,edad,"oceano",genero,"gris",6)
   def getColorEscamas(self):return self._colorEscamas
   def getCantidadAletas(self):return self._cantidadAletas
+  def movimiento(self):
+    return "nadar"

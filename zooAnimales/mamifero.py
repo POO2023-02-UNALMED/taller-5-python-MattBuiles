@@ -1,4 +1,4 @@
-from animal import Animal
+from .animal import Animal
 class Mamifero(Animal):
   listado=[]
   caballos=0
@@ -8,7 +8,7 @@ class Mamifero(Animal):
     self._pelaje=pelaje
     self._patas=patas
     Mamifero.listado.append(self)
-    super.totalAnimales+=1
+    Animal.cm+=1
   @classmethod
   def cantidadMamiferos(cls):
     return len(cls.listado)

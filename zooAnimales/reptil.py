@@ -1,4 +1,4 @@
-from animal import Animal
+from .animal import Animal
 class Reptil(Animal):
   listado=[]
   iguanas=0
@@ -8,7 +8,7 @@ class Reptil(Animal):
     self._colorEscamas=colorEscamas
     self._largoCola=largoCola
     Reptil.listado.append(self)
-    super.totalAnimales+=1
+    Animal.cr+=1
   @classmethod
   def cantidadReptiles(cls):
     return len(cls.listado)
@@ -22,3 +22,5 @@ class Reptil(Animal):
     return Reptil(nombre,edad,"jungla",genero,"blanco",1)
   def getColorEscamas(self):return self._colorEscamas
   def getLargoCola(self):return self._largoCola
+  def movimiento(self):
+    return "reptar"

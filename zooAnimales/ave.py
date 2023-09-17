@@ -1,4 +1,4 @@
-from animal import Animal
+from .animal import Animal
 class Ave(Animal):
   listado=[]
   halcones=0
@@ -7,7 +7,7 @@ class Ave(Animal):
     super().__init__(nombre,edad,habitat,genero)
     self._colorPlumas=colorPlumas
     Ave.listado.append(self)
-    super.totalAnimales+=1
+    Animal.ca+=1
   @classmethod
   def cantidadAves(cls):
     return len(cls.listado)
@@ -20,3 +20,5 @@ class Ave(Animal):
     cls.aguilas+=1
     return Ave(nombre,edad,"montanas",genero,"blanco y amarillo")
   def getColorPlumas(self):return self._colorPlumas
+  def movimiento(self):
+    return "volar"

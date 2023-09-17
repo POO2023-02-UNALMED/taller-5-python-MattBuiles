@@ -1,4 +1,4 @@
-from animal import Animal
+from .animal import Animal
 class Anfibio(Animal):
   listado=[]
   ranas=0
@@ -8,7 +8,7 @@ class Anfibio(Animal):
     self._colorPiel=colorPiel
     self._venenoso=venenoso
     Anfibio.listado.append(self)
-    super.totalAnimales+=1
+    Animal.can+=1
   @classmethod
   def cantidadAnfibio(cls):
     return len(cls.listado)
@@ -22,3 +22,5 @@ class Anfibio(Animal):
     return Anfibio(nombre,edad,"selva",genero,"negro y amarillo",False)
   def isVenenoso(self):return self._venenoso
   def getColorPiel(self):return self._colorPiel
+  def movimiento(self):
+    return "saltar"
