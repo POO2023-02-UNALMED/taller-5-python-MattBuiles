@@ -14,14 +14,14 @@ class Animal():
     self._zona=[]
     totalAnimales+=1
   def movimiento(self,mensaje="desplazarse"):
-    """
+
     if isinstance(self,Anfibio):return "saltar"
     elif isinstance(self,Ave):return "volar"
     elif isinstance(self,Reptil):return "reptar"
     elif isinstance(self,Pez):return "nadar"
     else: return "desplazarse"
-    """
-    return mensaje
+
+    #return mensaje
   def totalPorTipos(self):
     return "Mamiferos: "+str(Mamifero.cantidadMamiferos())+"\n" + "Aves: "+str(Ave.cantidadAves())+"\n" + "Reptiles: "+str(Reptil.cantidadReptiles())+"\n" + "Peces: "+str(Pez.cantidadPeces())+"\n" + "Anfibios: "+str(Anfibio.cantidadAnfibios())
   def __str__(self):
